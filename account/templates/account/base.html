@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="{% static '' %}" type=”image/x-icon”>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> {% block title %} {% endblock %}</title>
+    <meta name="description" content="{% block description %} {% endblock %}" />
+
+    {% block head %}  {% endblock %}
+    <link rel="stylesheet" href="{% static 'account/main.css' %}">
+
+
+</head>
+<body>
+
+
+
+
+
+
+{% if messages %}
+    <div class="ss">
+        {% for i in messages %}
+            <div class="mess">
+                <div class="messages_exit"></div>
+                {{ i }}
+            </div>
+        {% endfor %}
+
+    </div>
+{% endif %}
+
+
+
+<div class="body">
+<div class="content">
+    {% block body %}
+
+
+    {% endblock %}
+</div>
+</div>
+
+
+
+<footer class="footer">
+
+
+</footer>
+
+
+
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--    Подключка Анимаций-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    {% block script %}
+
+    {% endblock %}
+
+    <script type="text/javascript" src="{% static 'content/main.js' %}"></script>
+
+</div>
+
+</body>
+</html>

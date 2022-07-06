@@ -1,0 +1,9 @@
+.body{
+    background:rgb(233 244 255 / 50%);
+    display:flex;
+    width:100%;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+}
+}

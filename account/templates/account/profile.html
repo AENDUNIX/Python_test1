@@ -1,0 +1,16 @@
+{% extends "account/base.html" %}
+
+{% block body %}
+
+{% if user.is_authenticated %}
+    <p>Приветик {{user}}</p>
+    <p>Имя в телеграм: {{name}}</p>
+    <p>Твой юзер-айди: {{user_telegram_id}}</p>
+    <p>Юзернейм: {{user_name}}</p>
+    <p>Ссылка на тебя в телеграме: <a href="https://t.me/{{user_name}}">{{name}}</a></p>
+    <a href="{% url 'logout' %}">Выйти с Аккаунта</a>
+{% else %}
+    <p>Пожалуйста авторизируйтесь</p><a href="{% url 'login' %}">Тык</a>
+{% endif %}
+
+{% endblock %}
