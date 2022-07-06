@@ -18,7 +18,7 @@ class Reg(StatesGroup):
     password = State()
 
 
-@dp.message_handler(commands=['start'], state='*')
+@dp.message_handler(commands=['start', 'help'], state='*')
 async def process_start_command(message: types.Message):
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
     button_1 = types.KeyboardButton(text="Начать регистрацию")

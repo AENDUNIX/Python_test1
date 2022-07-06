@@ -145,5 +145,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "/home/app/web/mediafiles/")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ["http://192.168.0.110:4444", "http://192.168.0.110:4444", "http://135.181.44.92:4444", "https://www.135.181.44.92:4444"]
+#CSRF_TRUSTED_ORIGINS = ["http://192.168.0.1:8000"]
 
